@@ -1,3 +1,4 @@
 function editcli {
-  python editcli.py
+  python editcli/editcli.py
 }
+# only works in the home directory
