@@ -1,8 +1,8 @@
 appname = "App name: {name}"
 appname = appname.format(name = "Edit CLI")
 print(appname)
-openfile = str(raw_input("What is the path of the file? "))
-editoropen = str(raw_input("Do you want to add to, overwrite or view the file? a/o/v "))
+openfile = str(input("What is the path of the file? "))
+editoropen = str(input("Do you want to add to, overwrite or view the file? a/o/v "))
 if editoropen == "v":
     print("Opening file...")
     print("---------------")
@@ -14,7 +14,7 @@ elif editoropen == "a":
     filecontents = open(openfile,"r")
     print(filecontents.read())
     print("---------------------------")
-    linetoadd = str(raw_input("Please enter a line to add to this file... "))
+    linetoadd = str(input("Please enter a line to add to this file... "))
     filecontents = open(openfile,"a")
     filecontents.write("\n" + linetoadd)
     print("Added")
@@ -24,7 +24,7 @@ elif editoropen == "o":
     filecontents = open(openfile,"r")
     print(filecontents.read())
     print("---------------------------")
-    linetoadd = str(raw_input("Please enter a line that will replace the content of this file... "))
+    linetoadd = str(input("Please enter a line that will replace the content of this file... "))
     filecontents = open(openfile,"w")
     filecontents.write(linetoadd)
     print("Added")
