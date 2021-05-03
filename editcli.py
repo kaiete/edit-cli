@@ -2,7 +2,7 @@ appname = "App name: {name}"
 appname = appname.format(name = "Edit CLI")
 print(appname)
 openfile = str(input("What is the path of the file? "))
-editoropen = str(input("Do you want to add to, overwrite or view the file? a/o/v "))
+editoropen = str(input("Do you want to add to, overwrite, view the file, or create a new one? a/o/v/c respectively "))
 if editoropen == "v":
     print("Opening file...")
     print("---------------")
@@ -28,3 +28,9 @@ elif editoropen == "o":
     filecontents = open(openfile,"w")
     filecontents.write(linetoadd)
     print("Added")
+elif editoropen == "c":
+    filenametocreate = openfile
+    newfile = open(filenametocreate,"a")
+    newfile.write("")
+    newfile.close()
+    print("Done, file created.\nIf the file already existed, nothing will be changed.")
