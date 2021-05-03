@@ -39,6 +39,6 @@ elif editoropen == "cr":
     if input("Are you ABSOLUTELY SURE? The file's contents will be gone INDEFINITELY! (y/N)") == "y":
         corruptfile = open(openfile,"w")
         y = random.randint(1,100101010147859723578650684086498348645864868543638574867948567094670945678567506730565605638456546757866587540863)
-        corruptfile.write(y)
+        corruptfile.write(str(y))
     else:
         print("Nothing has been changed.")
