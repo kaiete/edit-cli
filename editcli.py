@@ -36,7 +36,7 @@ elif editoropen == "c":
     newfile.close()
     print("Done, file created.\nIf the file already existed, nothing will be changed.")
 elif editoropen == "cr":
-    if input("Are you ABSOLUTELY SURE? The file's contents will be gone INDEFINITELY! (y/N)") == "y":
+    if input("Are you ABSOLUTELY SURE? The file's contents will be gone INDEFINITELY! If the original file is small in size, the corrupted file is not based on the original, and may be bigger! (y/N)") == "y":
         corruptfile = open(openfile,"w")
         y = random.randint(1,100101010147859723578650684086498348645864868543638574867948567094670945678567506730565605638456546757866587540863)
         corruptfile.write(str(y))
