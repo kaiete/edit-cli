@@ -1,6 +1,5 @@
-appname = "App name: {name}"
+appname = "App name: {name}".format(name="Edit CLI")
 import random
-appname = appname.format(name = "Edit CLI")
 print(appname)
 openfile = str(input("What is the path of the file? "))
 editoropen = str(input("Do you want to add to, overwrite, view the file, create it or corrupt the file? a/o/v/c/cr respectively "))
